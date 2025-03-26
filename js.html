@@ -1,0 +1,24 @@
+<body>
+    <script type="text/javascript">
+  date=new Date();
+    year=date.getFullYear();
+     month=date.getMonth()+1;
+     day=date.getDate();
+     hour=date.getHours();
+     minute=date.getMinutes();
+     second=date.getSeconds();
+    document.write(year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second);
+    document.write('<br><button onclick="changeBackgroundColor()">改变背景颜色</button>');
+     document.write('<br><button onclick="showTimeAlert()">弹出对话框显示时间</button>');
+
+            function changeBackgroundColor() {
+            var colors = ["#FFCCCC", "#CCFFCC", "#CCCCFF", "#FFFFCC", "#FFCCFF", "#CCFFFF"];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    function showTimeAlert() {
+            var date = new Date();
+            var timeString = date.toLocaleTimeString(); 
+            alert("当前时间是: " + timeString);         }
+   </script>
+</body>
